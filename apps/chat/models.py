@@ -14,6 +14,7 @@ class Room (models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
     )
+    
     title = models.CharField(max_length=200) 
     # definidindo o tamanho maximo do titulo
     messages = models.ManyToManyField('Message', blank=True)
